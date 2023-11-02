@@ -1,0 +1,28 @@
+.analytics {
+  display: flex;
+
+  &__item {
+    margin-right: 56px;
+    display: flex;
+    flex-direction: column;
+    & > div {
+      width: 156px;
+      height: 6px;
+      margin-top: 7px;
+      border-radius: 12px;
+      background-color: #dee6f5;
+      position: relative;
+      overflow: hidden;
+
+      & > span {
+        display: block;
+        height: 100%;
+        position: relative;
+      }
+    }
+  }
+  &__title {
+    color: #122945;
+    @include font(14px, 21px, 400);
+  }
+}

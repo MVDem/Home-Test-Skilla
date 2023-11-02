@@ -1,0 +1,34 @@
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+$background-body: #e9edf3;
+$background-header: #ffffff;
+$background-table: #fff;
+$background-menu: #091336;
+$menu-text: #899cb1;
+$header-text: #899cb1;
+
+@mixin font($size: 14px, $heght: 17px, $weight: 300, $style: medium) {
+  font-family: 'SF Pro Display', sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $heght;
+  font-style: $style;
+}
+
+.active {
+  background-color: #d8e4fb52;
+  text-decoration: none;
+  position: relative;
+  & > p {
+    color: #ffffff;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #ffd500;
+    border-radius: 4px;
+    right: 12px;
+  }
+}

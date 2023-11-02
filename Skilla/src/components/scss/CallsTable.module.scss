@@ -1,0 +1,136 @@
+.settings {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__search {
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: inherit;
+    & > img {
+      width: 16px;
+      height: 16px;
+      margin-right: 12px;
+    }
+    & > p {
+      @include font(14px, 20px, 400);
+      color: #5e7793;
+    }
+  }
+
+  &__rightPanel {
+    display: flex;
+    & > button {
+      margin-left: 32px;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      border: none;
+      background-color: inherit;
+      & > img {
+        width: 21px;
+        height: 21px;
+        margin-left: 1px;
+      }
+      & > p {
+        @include font(14px, 20px, 400);
+        color: #5e7793;
+      }
+    }
+  }
+}
+
+.table {
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: $background-table;
+
+  &__title {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 40px 53px 89px 76px 52px 326px 214px 461px 129px;
+    border-bottom: 1px solid #eaf0fa;
+    & > p {
+      @include font(14px, 14px, 400);
+      color: #899cb1;
+    }
+  }
+
+  &__scroll {
+    width: 100%;
+    height: 704px;
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+}
+.tableContent {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 40px 53px 89px 76px 52px 326px 214px 461px 129px;
+  border-bottom: 1px solid #eaf0fa;
+
+  &:hover {
+    background-color: #eaf0fa;
+    cursor: pointer;
+  }
+
+  &__checkbox {
+    display: none;
+    width: 16px;
+    height: 16px;
+    margin-left: 12px;
+  }
+
+  &:hover &__checkbox {
+    display: block;
+  }
+
+  &__type {
+    display: flex;
+    width: 24px;
+    height: 24px;
+  }
+
+  &__time,
+  &__phone,
+  &__duration {
+    @include font(15px, 21px, 400);
+    color: #122945;
+  }
+
+  &__source {
+    @include font(14px, 14px, 400);
+    color: #899cb1;
+  }
+  &__duration {
+    padding-right: 40px;
+    text-align: end;
+  }
+  &__web {
+    width: 22px;
+    height: 22px;
+  }
+  &__avatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  &__grade {
+    display: flex;
+    align-items: center;
+    & > img {
+      margin-left: 8px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
